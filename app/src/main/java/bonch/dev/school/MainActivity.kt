@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnCreatePost.setOnClickListener{
-            val intent = Intent(this, PostCreateDialogFragment::class.java)
-            startActivity(intent)
+            val dialog = PostCreateDialogFragment(applicationContext)
+            dialog.show(supportFragmentManager,"Dialog")
         }
     }
 }
